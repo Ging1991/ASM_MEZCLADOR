@@ -57,11 +57,12 @@ int enmascarar_c(unsigned char *a, unsigned char *b, unsigned char *mask, int ca
 
 // Funcion principal
 int main(int argc, char *argv[]) {
+	printf("Iniciando mezclador de imagenes premiun 3.0...Ok")
 	
 	// Valido cantidad de argumentos
 	if (argc != 4) {
 		printf("Error: Se ha ingresado una cantidad de parametros incorrecta: %d\n", argc-1);
-		printf("Error: Deben ingresarse 3 parametros: imagen1, imagen2 y mascara");
+		printf("Error: Deben ingresarse 3 parametros: imagen1, imagen2 y mascara\n");
 		return 1;
 	}
 
@@ -102,7 +103,7 @@ int main(int argc, char *argv[]) {
 	clock_t tiempo_inicio, tiempo_final;
 	double segundos_c;
 	double segundos_asm;
-	int ciclos = 10000;
+	int ciclos = 2000;
 
 	// ENMASCARAR EN ASM
 	tiempo_inicio = clock();
@@ -123,7 +124,7 @@ int main(int argc, char *argv[]) {
 	guardarVector(imagen1_asm, largo, "salida_asm.rgb");
 	guardarVector(imagen1_c, largo, "salida_c.rgb");
 
-	printf("Largo: %d, C: %f, ASM: %f\n", largo, segundos_c, segundos_asm);
+	printf("Largo: %lu, C: %f, ASM: %f\n", largo, segundos_c, segundos_asm);
+	printf("Programa completado satisfactoriamente.\n")
 	return 0;
 }
-

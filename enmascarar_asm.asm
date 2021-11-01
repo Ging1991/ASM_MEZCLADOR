@@ -3,12 +3,12 @@
 section .data
 
 section .text
-    global _enmascarar_asm    
+    global enmascarar_asm    
 
-_enmascarar_asm:
+enmascarar_asm:
 
-    ; Generales
-    push EBP     ; guarda stack frame llamador
+    ; Entrar
+    push EBP     ; Guarda stack frame llamador
     mov EBP, ESP ; EBP apunta al frame actual
     
     ; Limpio todo
@@ -20,7 +20,7 @@ _enmascarar_asm:
     ; Valores iniciales
     XOR EDX, EDX
     MOV EAX, DWORD[EBP+20]
-    add EBX, 8
+    ADD EBX, 8
     DIV EBX
     MOV ECX, EAX
     
@@ -53,7 +53,7 @@ _enmascarar_asm:
         POR MM1, MM2    ;Combino ambas imagenes
         
         ; Guardo en imagen 1 el resultado
-        mov EBX, [EBP+8] ; img1
+        MOV EBX, [EBP+8] ; img1
         ADD EBX, EAX
         MOVQ [EBX], MM1
 
@@ -61,7 +61,7 @@ _enmascarar_asm:
 
     EMMS ; restaura la pila
     
-    ; Generales
+    ; Salir
     mov ESP, EBP ; restaura ESP
     pop EBP ; restaura EBP
         
