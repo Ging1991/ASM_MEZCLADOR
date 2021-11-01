@@ -21,7 +21,7 @@ nasm -f elf32 enmascarar_asm.asm -o enmascarar_asm.o;
 gcc -m32 -o main enmascarar_asm.o main.c;
 ./main "imagenes/RGB/imagen1.rgb" "imagenes/RGB/imagen2.rgb" "imagenes/RGB/mascara.rgb";
 ```
-Notar que al ejecutar el main, las cadenas que siguen son las rutas validas para imágenes RGB que harán de imagen 1, imagen 2 y mascara. Estas están provistas en este repositorio, pero puede probar con imágenes RGB propias colocando la ruta allí. Recuerden que si lo hacen las imágenes deben tener las mismas dimensiones.
+Notar que al ejecutar el main, las cadenas que siguen son las rutas válidas para **imágenes RGB** que serán los parámetros imagen 1, imagen 2 y máscara. Éstas están provistas en este repositorio, pero puede probar con imágenes RGB propias colocando la ruta allí. Recuerden que si lo hacen, las imágenes deben tener las mismas dimensiones.
 
 También puede ejecutar este programa simplemente llamando al archivo _compilacion.sh_
 ```bash
@@ -41,7 +41,7 @@ Luego de haber clonado el proyecto, abro una terminal en la carpeta raíz donde 
 
 ![Captura 1](/imagenes/capturas/tp_captura_1.png)
 
-Vamos a utilizar para este ejemplo una imagen de Goku SSB, una de Vegeta SSB y como mascara un bloque mitad negro mitad blanco.
+Vamos a utilizar para este ejemplo una imagen de Goku SSB, una de Vegeta SSB y como máscara un bloque mitad negro mitad blanco.
 
 ![Captura 2](/imagenes/capturas/tp_captura_2.png)
 
@@ -49,9 +49,18 @@ Luego de ejecutar el comando de compilación, veo que se crearon los archivos ll
 
 ![Captura 3](/imagenes/capturas/tp_captura_3.png)
 
-Finalmente para visualizar esto archivos usamos los comandos del GM
+Finalmente, para visualizar estos archivos usamos los comandos del GM
 
 ![Captura 4](/imagenes/capturas/tp_captura_4.png)
+
+## Comparación de rendimiento
+Para poder comparar el rendimiento de las funciones de enmascarar en C y en ASM, se ejecutó este programa con imágenes de entrada con distintos tamaños. Como normalmente sería demasiado rápido como para poder observar una diferencia, se agregó al programa un bucle para que cada una de estas funciones se ejecute **X** veces, en lugar de una vez, donde, a los efectos de esta prueba, **X** era 2000.
+
+![Captura 5](/imagenes/capturas/tp_captura_5.png)
+
+A continuación podemos observar los mismos datos en un grafico comparativo. Es fácil intuir hacia donde avanza la tendencia. Mientras mas grande sea la imagen, mayor será la diferencia en los rendimientos, **siendo muy superior ASM**.
+
+![Captura 6](/imagenes/capturas/tp_captura_6.png)
 
 ## Contribuciones
 No se aceptan **pull request**. Este es un trabajo para entregar a la facultad. Una vez termine el periodo de pruebas ya no se no le hará mantenimiento.
@@ -60,6 +69,8 @@ Eventualmente, si todo sale bien, crearé algunos ejemplos funcionales en ensamb
 ## Licencia
 [Sin licencia](https://choosealicense.com/licenses/unlicense/)
 ## Enlaces útiles
-[Ver perfil GitHub](https://github.com/Ging1991)
+[Ver perfil GitHub: Carlos Caballero](https://github.com/Ging1991)
 
-[Canal de Youtube](https://www.youtube.com/channel/UCsdNi2EY87x7vPVA9nNtyvA)
+[Ver perfil GitHub: Diego Lucero](https://github.com/sor1diegoml)
+
+[Canal de Youtube: Carlos Caballero](https://www.youtube.com/channel/UCsdNi2EY87x7vPVA9nNtyvA)
