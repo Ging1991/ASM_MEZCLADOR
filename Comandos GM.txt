@@ -1,6 +1,6 @@
 // Convertir los archivos RGB de salida en archivos JPG
-gm convert -size 500x500 -depth 8 salida_c.rgb salida.jpg
-gm convert -size 500x500 -depth 8 salida_asm.rgb salida.jpg
+gm convert -size 500x500 -depth 8 salida_c.rgb salida_c.jpg
+gm convert -size 500x500 -depth 8 salida_asm.rgb salida_asm.jpg
 
 // Mostrar salidas por pantalla
 gm convert -size 500x500 -depth 8 salida_c.rgb win:
