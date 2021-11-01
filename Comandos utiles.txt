@@ -1,9 +1,3 @@
-Para compilar primero hacer doble click en compilar.bat
-
-// Ejecutar
-./main "imagen1.rgb" "imagen2.rgb" "mascara.rgb"
-
-
 // Mostrar salidas por pantalla
 gm convert -size 500x500 -depth 8 salida_c.rgb win:
 gm convert -size 500x500 -depth 8 salida_asm.rgb win:

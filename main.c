@@ -57,7 +57,7 @@ int enmascarar_c(unsigned char *a, unsigned char *b, unsigned char *mask, int ca
 
 // Funcion principal
 int main(int argc, char *argv[]) {
-	printf("Iniciando mezclador de imagenes premiun 3.0...Ok")
+	printf("Iniciando mezclador de imagenes premiun 3.0...Ok\n");
 	
 	// Valido cantidad de argumentos
 	if (argc != 4) {
@@ -125,6 +125,6 @@ int main(int argc, char *argv[]) {
 	guardarVector(imagen1_c, largo, "salida_c.rgb");
 
 	printf("Largo: %lu, C: %f, ASM: %f\n", largo, segundos_c, segundos_asm);
-	printf("Programa completado satisfactoriamente.\n")
+	printf("Programa completado satisfactoriamente.\n");
 	return 0;
 }
